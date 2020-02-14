@@ -14,14 +14,14 @@ func main() {
 
 		f := fib()
 
-		res := &response{Message: "Hello World"}
+		res := &response{Message: "Hello Test User!! Changing it over here"}
 
 		for _, e := range os.Environ() {
 			pair := strings.Split(e, "=")
 			res.EnvVars = append(res.EnvVars, pair[0]+"="+pair[1])
 		}
 
-		for i := 1; i <= 90; i++ {
+		for i := 1; i <= 60; i++ {
 			res.Fib = append(res.Fib, f())
 		}
 
